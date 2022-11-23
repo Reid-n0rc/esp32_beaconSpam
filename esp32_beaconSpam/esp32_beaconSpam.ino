@@ -249,7 +249,7 @@ void loop() {
         for (int k = 0; k < 3; k++) {
           //packetCounter += wifi_send_pkt_freedom(beaconPacket, packetSize, 0) == 0;
           //Serial.printf("size: %d \n", packetSize);
-          packetCounter += esp_wifi_80211_tx(ESP_IF_WIFI_STA, beaconPacket, packetSize, 0) == 0;
+          packetCounter += esp_wifi_80211_tx(WIFI_IF_STA, beaconPacket, packetSize, 0) == 0;
           delay(1);
         }
       }
@@ -265,7 +265,7 @@ void loop() {
         // send packet
         for (int k = 0; k < 3; k++) {
           //packetCounter += wifi_send_pkt_freedom(tmpPacket, tmpPacketSize, 0) == 0;
-          packetCounter += esp_wifi_80211_tx(ESP_IF_WIFI_STA, tmpPacket, tmpPacketSize, 0) == 0;
+          packetCounter += esp_wifi_80211_tx(WIFI_IF_STA, tmpPacket, tmpPacketSize, 0) == 0;
           delay(1);
         }
 
